@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: agent-executor
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: EXEC_TOKEN
+        sync: false   # موقع ساخت سرویس، Render مقدارش را از تو می‌پرسد
